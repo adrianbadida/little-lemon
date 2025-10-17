@@ -24,13 +24,14 @@ const BookingForm = (props) => {
                             <input
                                 id="book-date"
                                 type="date"
+                                required
                                 value={date}
                                 onChange={(e) => handleChange(e.target.value)}
                                 />
                         </div>
                         <div>
                             <label htmlFor="book-time">Choose Time:</label>
-                           <select name="time" value={time} id="book-time" onChange={(e) => setTime(e.target.value)}>
+                           <select name="time" value={time} required id="book-time" onChange={(e) => setTime(e.target.value)}>
                                 <option value="">Choose a Time</option>
                                 {
                                     props.availableTime.availableTime.map(availableTime => {return <option key={availableTime}>{availableTime}</option>})
@@ -39,11 +40,11 @@ const BookingForm = (props) => {
                         </div>
                         <div>
                             <label htmlFor="book-guest">Choose number of Guests:</label>
-                            <input type="number" id="book-guests" min="1" value={guest} onChange={(e) => setGuest(e.target.value)}/>
+                            <input type="number" required id="book-guests" min="1" value={guest} onChange={(e) => setGuest(e.target.value)}/>
                         </div>
                         <div>
                             <label htmlFor="book-occasion">Choose Occasion:</label>
-                            <select name="occasion" id="book-occasion" key={occasion} value={occasion} onChange={(e) => setOccasion(e.target.value)}>
+                            <select name="occasion" required id="book-occasion" key={occasion} value={occasion} onChange={(e) => setOccasion(e.target.value)}>
                                 <option value="Birthday">Birthday</option>
                                 <option value="Anniversary">Anniversary</option>
                                 <option value="Date">Date</option>

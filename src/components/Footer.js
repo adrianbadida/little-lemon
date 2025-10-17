@@ -6,7 +6,7 @@ function Footer() {
     <footer>
         <section>
             <div className='company-info'>
-                <img src={logo} alt='small logo'/>
+                <img src={logo} alt='logo'/>
                 <p>We are a family owned Mediterraneran restaurant, focused on traditional recipes served with a modern twist.</p>
             </div>
             <div>
